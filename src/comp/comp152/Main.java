@@ -17,5 +17,8 @@ public class Main {
     Doctor doc = inNetworkDoctors.get(choice);
     doc.treatPatient(sickPerson1);
     doc.treatPatient(sickPerson2);
+    System.out.println(doc);
+    WeekDay appointmentDay = WeekDay.Monday;
+
     }
 }
