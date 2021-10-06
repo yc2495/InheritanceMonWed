@@ -1,8 +1,21 @@
 package comp.comp152;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	var inNetworkDoctors = new ArrayList<Doctor>();
+    inNetworkDoctors.add(new Doctor("Pricy University", 400));
+    inNetworkDoctors.add(new Surgeon("Children's Hospital",
+            "Fancy Univ", 1000.0));
+    var sickPerson1 = new Person("Stu Dent");
+    var sickPerson2 = new Person("Some Body");
+    var picker = new Random();
+    var choice = picker.nextInt(inNetworkDoctors.size());
+    Doctor doc = inNetworkDoctors.get(choice);
+    doc.treatPatient(sickPerson1);
+    doc.treatPatient(sickPerson2);
     }
 }
